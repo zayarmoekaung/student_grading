@@ -1,38 +1,54 @@
-# sv
+# Student Grading System
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is a web-based Student Grading System built with Flask (backend) and Svelte (frontend).
 
-## Creating a project
+## Prerequisites
+Ensure you have the following installed:
+- Python (>=3.8)
+- Node.js (>=16)
+- npm 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/zayarmoekaung/student_grading.git
+   cd student_grading
+   ```
 
-```bash
-# create a new project in the current directory
-npx sv create
+### Backend Setup (Flask)
+2. Create a virtual environment:
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   venv\Scripts\activate  # On Windows
+   ```
+3. Navigate to the source directory:
+   ```sh
+   cd source
+   ```
+4. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Run migrations and seed the database:
+   ```sh
+   flask db migrate
+   flask db upgrade
+   flask db seed  
+   ```
 
-# create a new project in my-app
-npx sv create my-app
+### Frontend Setup (Svelte)
+6. Install dependencies and build the frontend:
+   ```sh
+   npm install
+   npm run build
+   ```
+
+## Running the Application
+After building the frontend, only the Flask server needs to run:
+```sh
+setx FLASKAPP app.py
+flask run
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
