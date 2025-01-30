@@ -6,7 +6,7 @@ This is a web-based Student Grading System built with Flask (backend) and Svelte
 Ensure you have the following installed:
 - Python (>=3.8)
 - Node.js (>=16)
-- npm 
+- npm or yarn
 
 ## Setup
 1. Clone the repository:
@@ -34,7 +34,7 @@ Ensure you have the following installed:
    ```sh
    flask db migrate
    flask db upgrade
-   flask db seed  
+   flask db seed  # If a seed command is available
    ```
 
 ### Frontend Setup (Svelte)
@@ -51,4 +51,9 @@ setx FLASKAPP app.py
 flask run
 ```
 
+## API Documentation
+The API documentation is available on Postman:  
+[Student Grading System API](https://documenter.getpostman.com/view/13224271/2sAYX2LiZj)
 
+## License
+This project is open-source and available under the [MIT License](LICENSE).
