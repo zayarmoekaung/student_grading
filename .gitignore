@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.venv
+
+# Flask specific
+instance/
+*.log
+
+# pip dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Cache and temporary files
+*.bak
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# SQLite database
+*.sqlite3
+*.db
+
+# Svelte specific
+node_modules/
+.svelte-kit/
+*.log
+dist/
+build/
+
+# Vercel / Netlify
+.vercel/
+.netlify/
+
+# Local environment
+.DS_Store
+Thumbs.db
+
